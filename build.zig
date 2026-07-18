@@ -187,6 +187,11 @@ pub fn build(b: *std.Build) !void {
             .desc = "Demonstrates various flags used during and after window creation",
         },
         .{
+            .name = "automation_events",
+            .path = "examples/core/automation_events.zig",
+            .desc = "Demonstrates work with automation events",
+        },
+        .{
             .name = "input_gamepad",
             .path = "examples/core/input_gamepad.zig",
             .desc = "Demonstrates gamepad input",
