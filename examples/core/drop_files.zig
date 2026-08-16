@@ -20,7 +20,7 @@ pub fn main() anyerror!void {
     var filePaths = try allocator.alloc([MAX_FILEPATH_SIZE]u8, MAX_FILEPATH_RECORDED);
     defer allocator.free(filePaths);
     for (filePaths) |*entry| {
-        entry.* = std.mem.zeroes([MAX_FILEPATH_SIZE]u8);
+        entry.* = @splat(0);
     }
 
     rl.setTargetFPS(60);
